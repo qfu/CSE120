@@ -1,0 +1,1 @@
+scp -r ../pa1 cs120wsd@ieng9.ucsd.edu:
