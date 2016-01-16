@@ -26,8 +26,8 @@ yield (p){
     restoreContext(p)
 }
 ```
-* if magic = 1: The control flow has already yielded to `p` and back to our current process `me`
-* if magic = 0: The control flow is about to yield to another process `p`
+* if magic = 1: The control flow has already yielded to `p` and back to our current process `me` (The `restoreContext(p)` instruction of our current `yield` has already executed).
+* if magic = 0: The control flow is about to yield to another process `p`. (The `restoreContext(p)` instruction of our current `yield` has not executed)
 * If we do not use the variable `magic`, the control flow will stuck in the `restoreContext(p)` instruction.
 
 
