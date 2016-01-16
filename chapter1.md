@@ -1,5 +1,3 @@
-# First Chapter
-
 # Process
 
 ## Memory Structure
