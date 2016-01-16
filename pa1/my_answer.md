@@ -26,11 +26,32 @@ I am the second child, my pid is 3
 Process 3 just yielded to me (the parent)
 
 ```
-# Exercise D
-
-* BAP:
-
-```C
+### Exercise E
+* processes: 1| 21|
 
 
+
+print sequences
+```
+1 about to fork
+1 just forked 2
+1 about to fork
+1 just forked 3
+1 about to fork
+1 just forked 4
+1 yielding to 4
+4 starting
+4 yielding to 3
+3 starting
+3 yielding to 2
+2 starting
+2 yielding to 1
+1 resumed by 2, yielding to 4
+4 resumed by 1, yielding to 3
+3 resumed by 4, yielding to 2
+2 resumed by 3, yielding to 1
+1 existing
+2 existing
+3 existing
+4 existing
 ```
