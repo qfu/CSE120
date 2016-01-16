@@ -46,4 +46,4 @@
 For a complex program simulate problem, it is a nice idea to maintain a call site list, each element represent a process, and for each process, maintain the line number where the control flow jumped.
 
 
-e.g. 
+e.g. ![](IMG_0612.png)
