@@ -67,15 +67,19 @@
 void Main ()
 {
 	int pid;
+	Printf("parent process entered\n");
 
 	if ((pid = Fork ()) == 0) {
 
 		/* child executes here */
-
-		Printf ("I am the child, my pid is %d\n", Getpid ());
+		Printf("Child process entered\n");
+		Printf("The pid value in child process is %d\n", pid);
+		//Printf ("I am the child, my pid is %d\n", Getpid ());
+		Printf("Child process exited\n");
 		Exit ();
 	}
 
 	Printf ("I am the parent, my pid is %d\n", Getpid ());
 	Printf ("I just created a child process whose pid is %d\n", pid);
+	Printf("parent process exited\n");
 }

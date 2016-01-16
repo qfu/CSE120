@@ -33,7 +33,7 @@ void Main ()
 	Printf ("I am the parent, my pid is %d\n", Getpid ());
 
 	Printf ("About to yield to child process whose pid is %d\n", pid);
-	rpid = Yield (pid);	/* yield to first child before continuing */
+	rpid = Yield (pid);	/* yield to first child before continuing */ 
 	Printf ("Process %d just yielded to me (the parent)\n", rpid);
 
 	if ((pid = Fork ()) == 0) {

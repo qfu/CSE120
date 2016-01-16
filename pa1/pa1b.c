@@ -19,8 +19,10 @@
 void Main ()
 {
 	int pid = 0;
+	int child_1 = 0;
 
-	if ((pid = Fork ()) == 0) {
+
+	if ((child_1 = pid = Fork ()) == 0) {
 
 		/* first child executes here */
 
@@ -28,8 +30,7 @@ void Main ()
 		Exit ();
 	}
 
-	Printf ("I am the parent, my pid is %d\n", Getpid ());
-	Printf ("I just created a child process whose pid is %d\n", pid);
+
 
 	if ((pid = Fork ()) == 0) {
 
@@ -40,6 +41,10 @@ void Main ()
 	}
 
 	/* HERE */
-
+	Printf("%s\n", "exercise b:");
+	Printf ("I am the parent, my pid is %d\n", Getpid ());
+	Printf ("I just created a child process whose pid is %d\n", child_1);
 	Printf ("I (the parent) just created a second child process whose pid is %d\n", pid);
+
+
 }
