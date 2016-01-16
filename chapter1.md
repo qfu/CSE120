@@ -15,6 +15,20 @@
 
 **Stack Pointer (SP)**: point to the top of process stack.
 
+**The magic of `yield(p)`**
+```C
+yield (p){
+    int magic;
+    magic = 0;
+    saveContext(me);
+    if magic == 1   return;
+    else magic = 1;
+    restoreContext(p)
+}
+```
+* if magic = 1: The control flow has already yielded to `p` and back to our current process `me`
+* if magic = 0: The control flow is about to yield to another process `p`
+* If we do not use the variable `magic`, the control flow will stuck in the `restoreContext(p)` instruction.
 
 
 
