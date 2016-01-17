@@ -1,6 +1,6 @@
 # Process
 
-## Memory Structure
+### Memory Structure
 * **Text**: code -- program instructions
 * **Data**:
     * global variables
@@ -32,7 +32,12 @@ yield (p){
 
 
 
-## Homework Notes
+---
+
+
+
+
+### Homework Notes
 
 
 #### `Fork()`
@@ -63,3 +68,4 @@ e.g. for analyzing the output of pa1e ![](IMG_0612.png).
 * In operating system kernel:
     * we should not use `malloc` since it is unreliable.
     * In order to maintain a global shared memory (shared by all processes), we can use a static variable defined in global scope to store it.
+    * **Note that in CSE120 Instructional OS, pid starts with 1, not 0**
