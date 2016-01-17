@@ -2,7 +2,7 @@
 
 LIBDIR = $(UMIXPUBDIR)/lib
 
-CC 	= cc 
+CC 	= cc
 FLAGS 	= -g -L$(LIBDIR) -lumix1
 
 PA1 =	pa1a pa1b pa1c pa1d pa1e pa1f

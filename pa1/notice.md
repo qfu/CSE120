@@ -17,3 +17,5 @@ Getpid () which returns the pid of the calling process.
 Exit () which causes the calling process to be destroyed.
 
 for the child to learn its identifier, it must call Getpid ().
+
+* MySwitchContext (p): which causes a context switch to process p, and returns the process ID of the process that just called Yield (p).
