@@ -29,12 +29,13 @@ int MySwitchContext (int p)
 */
 
 
-static CONTEXT process_table[MAXPROCS];
-
+//static
+CONTEXT process_table[MAXPROCS + 1];
+int me;
 
 int MySwitchContext (int p)
 {
-    int me = GetCurProc();
+    me = GetCurProc();
     int magic = 0;     // times that SaveContext() has already been called
     SaveContext(&(process_table[me]));
     if (magic == 1) {
